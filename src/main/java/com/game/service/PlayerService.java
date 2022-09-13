@@ -268,9 +268,9 @@ public class PlayerService {
 
         try {
             Optional<Player> optional = repository.findById(Long.parseLong(id));
-            if (optional.isEmpty()) {
-                throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-            }
+//            if (optional.isEmpty()) {
+//                throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+//            }
             player = optional.get();
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
